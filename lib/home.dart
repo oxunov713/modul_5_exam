@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class HomePage extends StatefulWidget {
   HomePage({super.key});
 
@@ -8,138 +9,143 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageStat extends State<HomePage> {
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Row(
-          children: [
-            Expanded(
-              flex: 1,
-              child: Container(
-                color: Color(0xFF030303),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.apple,
-                        color: Color(0xFFFAFBFA),
-                        size: 40,
+        backgroundColor: Color(0xFFFAFBFA),
+        body: Padding(
+          padding: const EdgeInsets.all(15),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.keyboard_backspace,
+                      size: 40,
+                      color: Color(0xFF030303),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.black),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: Icon(
+                          Icons.favorite_border_outlined,
+                          size: 25,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 25),
-                          child: RotatedBox(
-                            quarterTurns: 3,
-                            child: Text(
-                              "Watches",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white,
-                                decoration: TextDecoration.underline,
-                                decorationThickness: 2,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 25, bottom: 25),
-                          child: RotatedBox(
-                            quarterTurns: 3,
-                            child: Text(
-                              "Macbooks",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w400,
-                                color: Color.fromRGBO(255, 255, 255, 0.5),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 25, bottom: 150),
-                          child: RotatedBox(
-                            quarterTurns: 3,
-                            child: Text(
-                              "Iphones",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontFamily: "Poppins",
-                                fontWeight: FontWeight.w400,
-                                color: Color.fromRGBO(255, 255, 255, 0.5),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Icon(
-                            Icons.home,
-                            color: Color(0xFFFAFBFA),
-                            size: 40,
-                          ),
-                        ),
-                      ],
+                  ),
+                ],
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Container(
+                  height: 400,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/watch_2.webp"),
                     ),
-                  ],
+                  ),
                 ),
               ),
-            ),
-            Expanded(
-              flex: 3,
-              child: Container(
-                margin: EdgeInsets.only(top: 20, right: 20, left: 30),
-                color: Color(0xFFFAFBFA),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Icon(
-                        Icons.search,
-                        size: 30,
-                      ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 5,
+                    width: 20,
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.all(Radius.circular(15))),
+                  ),
+                  Container(
+                    height: 5,
+                    width: 10,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFC4C4C4),
+                      shape: BoxShape.circle,
                     ),
-                    Text(
-                      "Apple",
-                      style: TextStyle(
-                        fontFamily: "Poppins",
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xFF777070),
-                      ),
+                  ),
+                  Container(
+                    height: 5,
+                    width: 10,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFC4C4C4),
+                      shape: BoxShape.circle,
                     ),
-                    Text(
-                      "Watches",
+                  ),
+                  Container(
+                    height: 5,
+                    width: 10,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFC4C4C4),
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 8, bottom: 5, left: 10),
+                child: Text(
+                  "Series 3",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF030303),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 5, left: 10),
+                child: Text(
+                  "The apple watch series 3 is designed for people who want to keep their fitness game on point.",
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xFF3A3A3A),
+                  ),
+                ),
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding:
+                    const EdgeInsets.only(top: 15, bottom: 5, left: 10),
+                    child: Text(
+                      r"$295.00",
                       style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 20,
                         fontFamily: "Poppins",
                         fontWeight: FontWeight.w600,
                         color: Color(0xFF030303),
                       ),
                     ),
-                    Align(
-                      alignment: Alignment.center,
-                      child: Container(
-                        height: 250,
-                        width: 300,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/watch_2.webp"),
-                          ),
-                        ),
+                  ),
+                  Padding(
+                    padding:
+                    const EdgeInsets.only(top: 15, bottom: 5, left: 20),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white24,
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 8, bottom: 5),
                       child: Text(
-                        "Series 3",
+                        "+",
                         style: TextStyle(
                           fontSize: 20,
                           fontFamily: "Poppins",
@@ -148,81 +154,45 @@ class _HomePageStat extends State<HomePage> {
                         ),
                       ),
                     ),
-                    Text(
-                      "The apple watch series 3 is designed for people who want to keep their fitness game on point.",
-                      style: TextStyle(
-                        fontSize: 10,
-                        fontFamily: "Poppins",
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xFF030303),
-                      ),
+                  ),
+                ],
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 10, top: 20),
+                height: 60,
+                width: double.infinity,
+                color: Colors.black,
+                child: Center(
+                  child: Text(
+                    "PROCEED TO BUY",
+                    style: TextStyle(
+                      fontFamily: "Poppins",
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFFFAFBFA),
                     ),
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8, bottom: 5),
-                          child: Text(
-                            r"$295.00",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: "Poppins",
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFF030303),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              top: 8, bottom: 5, left: 20),
-                          child: Text(
-                            "+",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontFamily: "Poppins",
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xFF030303),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ), Align(
-                      alignment: Alignment.center,
-                      child: Container(
-                        height: 200,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/watch_3.jfif"),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 5, bottom: 3),
-                      child: Text(
-                        "Series 5",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontFamily: "Poppins",
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xFF030303),
-                        ),
-                      ),
-                    ),
-                    Text(
-                      "The apple watch series 3 is designed for people who want to keep their fitness game on point.",
-                      style: TextStyle(
-                        fontSize: 10,
-                        fontFamily: "Poppins",
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xFF030303),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
-            ),
-          ],
+              Container(
+                margin: EdgeInsets.only(left: 10, top: 10),
+                height: 60,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(width: 2, color: Colors.black)),
+                child: Center(
+                  child: Text(
+                    "ADD TO CART",
+                    style: TextStyle(
+                      fontFamily: "Poppins",
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
